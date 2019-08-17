@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestTask</name>
+    </assembly>
+    <members>
+        <member name="M:TestTask.Controllers.MapDataController.LakeArea">
+            <summary>
+            Builds the map object, finds the area of lakes(water squares that have an adjacent water square)
+            </summary>
+        </member>
+        <member name="M:TestTask.Controllers.MapDataController.WaterArea">
+            <summary>
+            Builds the map object, finds the area of lakes(water squares that have an adjacent water square)
+            </summary>
+            <returns>total area of waters</returns>
+        </member>
+        <member name="M:TestTask.Controllers.MapDataController.Map">
+            <summary>
+            Builds the map object.
+            </summary>
+            <returns>Map object JSON</returns>
+        </member>
+    </members>
+</doc>
