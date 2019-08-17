@@ -28,7 +28,7 @@ namespace TestTask.Controllers
         }
 
         /// <summary>
-        /// Builds the map object, finds the area of lakes(water squares that have an adjacent water square)
+        /// Builds the map object, finds the area of waters
         /// </summary>
         /// <returns>total area of waters</returns>
         /// <response code="200">Returns the water surface area</response>
