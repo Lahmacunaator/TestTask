@@ -8,18 +8,25 @@
             <summary>
             Builds the map object, finds the area of lakes(water squares that have an adjacent water square)
             </summary>
+            <returns>total area of lakes</returns>
+            <response code="200">Returns the lake surface area</response>
+            <response code="400">If the item is null</response> 
         </member>
         <member name="M:TestTask.Controllers.MapDataController.WaterArea">
             <summary>
             Builds the map object, finds the area of lakes(water squares that have an adjacent water square)
             </summary>
             <returns>total area of waters</returns>
+            <response code="200">Returns the water surface area</response>
+            <response code="400">If the item is null</response>  
         </member>
         <member name="M:TestTask.Controllers.MapDataController.Map">
             <summary>
             Builds the map object.
             </summary>
             <returns>Map object JSON</returns>
+            <response code="200">Returns the Map object JSON</response>
+            <response code="400">If the item is null</response>  
         </member>
     </members>
 </doc>

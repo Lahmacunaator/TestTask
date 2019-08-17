@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LakeAreaService;
+﻿using LakeAreaService;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
 
 namespace TestTask.Controllers
 {
@@ -19,14 +11,18 @@ namespace TestTask.Controllers
         /// Builds the map object, finds the area of lakes(water squares that have an adjacent water square)
         /// </summary>
         /// <returns>total area of lakes</returns>
+        /// <response code="200">Returns the lake surface area</response>
+        /// <response code="400">If the item is null</response> 
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public ActionResult<int> LakeArea()
         {
             var mapBuilder = new MapBuilder();
             var mapAnalyzer = new MapAnalyzer();
 
             var map = mapBuilder.BuildMap();
-            var areas = mapAnalyzer.FindAdjacentRows(map);
+            var areas = mapAnalyzer.GetLakeAndWaterAreas(map);
 
             return areas[0];
         }
@@ -35,14 +31,18 @@ namespace TestTask.Controllers
         /// Builds the map object, finds the area of lakes(water squares that have an adjacent water square)
         /// </summary>
         /// <returns>total area of waters</returns>
+        /// <response code="200">Returns the water surface area</response>
+        /// <response code="400">If the item is null</response>  
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public ActionResult<int> WaterArea()
         {
             var mapBuilder = new MapBuilder();
             var mapAnalyzer = new MapAnalyzer();
 
             var map = mapBuilder.BuildMap();
-            var areas = mapAnalyzer.FindAdjacentRows(map);
+            var areas = mapAnalyzer.GetLakeAndWaterAreas(map);
 
             return areas[1];
         }
@@ -51,7 +51,11 @@ namespace TestTask.Controllers
         /// Builds the map object.
         /// </summary>
         /// <returns>Map object JSON</returns>
+        /// <response code="200">Returns the Map object JSON</response>
+        /// <response code="400">If the item is null</response>  
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public ActionResult Map()
         {
             var mapBuilder = new MapBuilder();

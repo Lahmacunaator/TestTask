@@ -595,9 +595,6 @@
         }
       },
       "LakeAreaService/1.0.0": {
-        "dependencies": {
-          "Microsoft.NETCore.App": "2.1.0"
-        },
         "runtime": {
           "LakeAreaService.dll": {}
         },
