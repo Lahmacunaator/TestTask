@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lahmacunity\\Documents\\New folder\\LakeAreaService\\LakeAreaService.csproj": {}
+    "C:\\Users\\Lahmacunity\\Documents\\DeleteLaterTest\\TestTask\\LakeAreaService\\LakeAreaService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lahmacunity\\Documents\\New folder\\LakeAreaService\\LakeAreaService.csproj": {
+    "C:\\Users\\Lahmacunity\\Documents\\DeleteLaterTest\\TestTask\\LakeAreaService\\LakeAreaService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lahmacunity\\Documents\\New folder\\LakeAreaService\\LakeAreaService.csproj",
+        "projectUniqueName": "C:\\Users\\Lahmacunity\\Documents\\DeleteLaterTest\\TestTask\\LakeAreaService\\LakeAreaService.csproj",
         "projectName": "LakeAreaService",
-        "projectPath": "C:\\Users\\Lahmacunity\\Documents\\New folder\\LakeAreaService\\LakeAreaService.csproj",
+        "projectPath": "C:\\Users\\Lahmacunity\\Documents\\DeleteLaterTest\\TestTask\\LakeAreaService\\LakeAreaService.csproj",
         "packagesPath": "C:\\Users\\Lahmacunity\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lahmacunity\\Documents\\New folder\\LakeAreaService\\obj\\",
+        "outputPath": "C:\\Users\\Lahmacunity\\Documents\\DeleteLaterTest\\TestTask\\LakeAreaService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

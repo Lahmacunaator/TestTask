@@ -17,3 +17,12 @@ C:\Users\Lahmacunity\Documents\New folder\LakeAreaService\obj\Debug\netcoreapp2.
 C:\Users\Lahmacunity\Documents\New folder\LakeAreaService\obj\Debug\netcoreapp2.1\LakeAreaService.dll
 C:\Users\Lahmacunity\Documents\New folder\LakeAreaService\obj\Debug\netcoreapp2.1\LakeAreaService.pdb
 C:\Users\Lahmacunity\Documents\New folder\LakeAreaService\obj\Debug\netcoreapp2.1\LakeAreaService.csprojAssemblyReference.cache
+C:\Users\Lahmacunity\Documents\DeleteLaterTest\TestTask\LakeAreaService\bin\Debug\netcoreapp2.1\LakeAreaService.deps.json
+C:\Users\Lahmacunity\Documents\DeleteLaterTest\TestTask\LakeAreaService\bin\Debug\netcoreapp2.1\LakeAreaService.dll
+C:\Users\Lahmacunity\Documents\DeleteLaterTest\TestTask\LakeAreaService\bin\Debug\netcoreapp2.1\LakeAreaService.pdb
+C:\Users\Lahmacunity\Documents\DeleteLaterTest\TestTask\LakeAreaService\obj\Debug\netcoreapp2.1\LakeAreaService.csprojAssemblyReference.cache
+C:\Users\Lahmacunity\Documents\DeleteLaterTest\TestTask\LakeAreaService\obj\Debug\netcoreapp2.1\LakeAreaService.csproj.CoreCompileInputs.cache
+C:\Users\Lahmacunity\Documents\DeleteLaterTest\TestTask\LakeAreaService\obj\Debug\netcoreapp2.1\LakeAreaService.AssemblyInfoInputs.cache
+C:\Users\Lahmacunity\Documents\DeleteLaterTest\TestTask\LakeAreaService\obj\Debug\netcoreapp2.1\LakeAreaService.AssemblyInfo.cs
+C:\Users\Lahmacunity\Documents\DeleteLaterTest\TestTask\LakeAreaService\obj\Debug\netcoreapp2.1\LakeAreaService.dll
+C:\Users\Lahmacunity\Documents\DeleteLaterTest\TestTask\LakeAreaService\obj\Debug\netcoreapp2.1\LakeAreaService.pdb
