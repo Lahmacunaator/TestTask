@@ -39,7 +39,8 @@ namespace TestTask
                 {
                     Title = "Map Data Api",
                     Version = "v1",
-                    Description = "An API to get the map related data from the Resources folder",
+                    Description = "An API to return the map data json, water surface area or lake surface area from either" +
+                                  "The **Input.asc** file in **Resources** folder or, map data provided with **post method**.",
                     Contact = new OpenApiContact
                     {
                         Name = "Baris Can Soy",

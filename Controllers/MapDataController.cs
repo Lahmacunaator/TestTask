@@ -15,6 +15,7 @@ namespace TestTask.Controllers
         /// <response code="200">Returns the lake surface area</response>
         /// <response code="400">If the item is null</response> 
         [HttpGet]
+        [Produces("application/json")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult<int> LakeArea()
@@ -35,6 +36,7 @@ namespace TestTask.Controllers
         /// <response code="200">Returns the water surface area</response>
         /// <response code="400">If the item is null</response>  
         [HttpGet]
+        [Produces("application/json")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult<int> WaterArea()
@@ -68,10 +70,17 @@ namespace TestTask.Controllers
         /// <summary>
         /// Takes the map data as input and returns the Map object JSON.
         /// </summary>
-        /// <param name="mapData"></param>
+        /// <param name="mapData">Post method input</param>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///    ########## ##O##O#O#O ##OOOOOOOO ####O##### ##OOO##### #OO####O## #OOOO###O# ####OO#### #####O#### ##########
+        /// 
+        /// </remarks>
         /// <response code="200">Returns the Map object JSON</response>
-        /// <response code="400">If the item is null</response>  
+        /// <response code="400">If the item is null</response>
         [HttpPost("{mapData}")]
+        [Produces("application/json")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult LoadMapData(string mapData)
@@ -86,10 +95,11 @@ namespace TestTask.Controllers
         /// <summary>
         /// Takes the map data as input and returns the Lake(water squares that have an adjacent water square) area.
         /// </summary>
-        /// <param name="mapData"></param>
+        /// <param name="mapData">Post method input</param>
         /// <response code="200">Returns the lake surface area</response>
         /// <response code="400">If the item is null</response>  
         [HttpPost("{mapData}")]
+        [Produces("application/json")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult<int> LoadLakeData(string mapData)
@@ -108,10 +118,11 @@ namespace TestTask.Controllers
         /// <summary>
         /// Takes the map data as input and returns the Lake(water squares that have an adjacent water square) area.
         /// </summary>
-        /// <param name="mapData"></param>
+        /// <param name="mapData">Post method input</param>
         /// <response code="200">Returns the water surface area</response>
         /// <response code="400">If the item is null</response>  
         [HttpPost("{mapData}")]
+        [Produces("application/json")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public ActionResult<int> LoadWaterData(string mapData)
