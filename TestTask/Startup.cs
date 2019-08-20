@@ -29,7 +29,7 @@ namespace TestTask
             {
                 s.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Map Data Api",
+                    Title = "Map Data API",
                     Version = "v1",
                     Description = "An API to return the map object json, water surface area or lake surface area from either" +
                                   "The `Input.asc` file in `Resources` folder or, map data provided with `post methods`.<br/><br/><br/>" +
