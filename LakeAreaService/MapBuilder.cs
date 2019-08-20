@@ -6,7 +6,7 @@ using LakeAreaService.Landscapes;
 
 namespace LakeAreaService
 {
-    public class MapBuilder
+    public class MapBuilder : IMapBuilder
     {
         /// <summary>
         /// Builds map data
@@ -122,5 +122,10 @@ namespace LakeAreaService
                     break;
             }
         }
+    }
+
+    public interface IMapBuilder
+    {
+        IMap BuildMap(byte[] bytes = null);
     }
 }

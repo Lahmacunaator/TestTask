@@ -5,7 +5,7 @@ using LakeAreaService.Landscapes;
 
 namespace LakeAreaService
 {
-    public class MapAnalyzer
+    public class MapAnalyzer : IMapAnalyzer
     {
         /// <summary>
         /// Get Lake and Water areas from map data, returns array[lake area, water area]
@@ -49,9 +49,13 @@ namespace LakeAreaService
         private static bool IsLake(ILandscape tempWater, ILandscape water)
         {
             if (MathF.Abs(tempWater.SquareMorph - water.SquareMorph) != 1) return true;
-            if ((!(MathF.Abs(tempWater.X - water.X) <= 1) || tempWater.Y != water.Y) &&
-                (!(MathF.Abs(tempWater.Y - water.Y) <= 1) || tempWater.X != water.X)) return true;
-            return false;
+            return (!(MathF.Abs(tempWater.X - water.X) <= 1) || tempWater.Y != water.Y) &&
+                   (!(MathF.Abs(tempWater.Y - water.Y) <= 1) || tempWater.X != water.X);
         }
+    }
+
+    public interface IMapAnalyzer
+    {
+        int[] GetLakeAndWaterAreas(IMap map);
     }
 }

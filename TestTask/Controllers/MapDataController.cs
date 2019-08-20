@@ -8,6 +8,7 @@ namespace TestTask.Controllers
     [ApiController]
     public class MapDataController : Controller
     {
+        readonly MapManager _mapManager = new MapManager(new MapBuilder(), new MapAnalyzer());
         /// <summary>
         /// Builds the map object from input file, finds the area of lakes(water squares that have an adjacent water square) and returns the area of lakes.
         /// </summary>
@@ -20,11 +21,9 @@ namespace TestTask.Controllers
         [ProducesResponseType(400)]
         public ActionResult<int> LakeArea()
         {
-            var mapBuilder = new MapBuilder();
-            var mapAnalyzer = new MapAnalyzer();
-
-            var map = mapBuilder.BuildMap();
-            var areas = mapAnalyzer.GetLakeAndWaterAreas(map);
+            
+            var map = _mapManager.Builder.BuildMap();
+            var areas = _mapManager.Analyzer.GetLakeAndWaterAreas(map);
 
             return areas[0];
         }
@@ -41,11 +40,8 @@ namespace TestTask.Controllers
         [ProducesResponseType(400)]
         public ActionResult<int> WaterArea()
         {
-            var mapBuilder = new MapBuilder();
-            var mapAnalyzer = new MapAnalyzer();
-
-            var map = mapBuilder.BuildMap();
-            var areas = mapAnalyzer.GetLakeAndWaterAreas(map);
+            var map = _mapManager.Builder.BuildMap();
+            var areas = _mapManager.Analyzer.GetLakeAndWaterAreas(map);
 
             return areas[1];
         }
@@ -61,8 +57,7 @@ namespace TestTask.Controllers
         [ProducesResponseType(400)]
         public ActionResult Map()
         {
-            var mapBuilder = new MapBuilder();
-            var map = mapBuilder.BuildMap();
+            var map = _mapManager.Builder.BuildMap();
 
             return Json(map);
         }
@@ -85,9 +80,8 @@ namespace TestTask.Controllers
         [ProducesResponseType(400)]
         public ActionResult LoadMapData(string mapData)
         {
-            var mapBuilder = new MapBuilder();
             var bytes = Encoding.ASCII.GetBytes(mapData);
-            var map = mapBuilder.BuildMap(bytes);
+            var map = _mapManager.Builder.BuildMap(bytes);
 
             return Json(map);
         }
@@ -104,13 +98,10 @@ namespace TestTask.Controllers
         [ProducesResponseType(400)]
         public ActionResult<int> LoadLakeData(string mapData)
         {
-            var mapBuilder = new MapBuilder();
-            var mapAnalyzer = new MapAnalyzer();
-
             var bytes = Encoding.ASCII.GetBytes(mapData);
-            var map = mapBuilder.BuildMap(bytes);
 
-            var areas = mapAnalyzer.GetLakeAndWaterAreas(map);
+            var map = _mapManager.Builder.BuildMap(bytes);
+            var areas = _mapManager.Analyzer.GetLakeAndWaterAreas(map);
 
             return areas[0];
         }
@@ -127,13 +118,10 @@ namespace TestTask.Controllers
         [ProducesResponseType(400)]
         public ActionResult<int> LoadWaterData(string mapData)
         {
-            var mapBuilder = new MapBuilder();
-            var mapAnalyzer = new MapAnalyzer();
-
             var bytes = Encoding.ASCII.GetBytes(mapData);
-            var map = mapBuilder.BuildMap(bytes);
 
-            var areas = mapAnalyzer.GetLakeAndWaterAreas(map);
+            var map = _mapManager.Builder.BuildMap(bytes);
+            var areas = _mapManager.Analyzer.GetLakeAndWaterAreas(map);
 
             return areas[1];
         }
