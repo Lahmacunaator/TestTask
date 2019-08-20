@@ -18,7 +18,7 @@ namespace LakeAreaService
             {
                 rowWithWater.Landscapes.FindAll(l => l.Type.Equals("Water")).ForEach(w => waters.Add(w));
             }
-            if (waters[0] == null || waters.Count <= 1) return new[] { 0, 0 };
+            if (waters.Count <= 0) return new[] { 0, 0 };
 
             var tempWaters = waters;
             tempWaters.Reverse();

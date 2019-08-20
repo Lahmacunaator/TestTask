@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Text;
 using LakeAreaService.Landscapes;
 
@@ -118,6 +119,18 @@ namespace LakeAreaService
                         SquareMorph = rowCount + columnCount
                     };
                     landscapeListAll.Add(water);
+                    columnCount++;
+                    break;
+                default:
+                    type = "Unidentified";
+                    var unidentified = new Landscape
+                    {
+                        Type = type,
+                        X = columnCount,
+                        Y = rowCount - 1,
+                        SquareMorph = rowCount + columnCount
+                    };
+                    landscapeListAll.Add(unidentified);
                     columnCount++;
                     break;
             }

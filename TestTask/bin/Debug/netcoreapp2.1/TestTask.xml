@@ -28,35 +28,53 @@
             <response code="200">Returns the Map object JSON</response>
             <response code="400">If the item is null</response>  
         </member>
-        <member name="M:TestTask.Controllers.MapDataController.LoadMapData(System.String)">
+        <member name="M:TestTask.Controllers.MapDataController.LoadLakeArea(System.String)">
+            <summary>
+            Takes the map data as input and returns the total Lake(water squares that have an adjacent water square) surface area.
+            </summary>
+            <param name="mapData">"#" as land square meter, "O" as water square meter, combining to make a square map</param>
+            <remarks>
+            Sample requests:
+            
+            *   ########## ##O##O#O#O ##OOOOOOOO ####O##### ##OOO##### #OO####O## #OOOO###O# ####OO#### #####O#### ##########
+            *   ###O##O##O ##O##O#O#O ##OOO##OOO O###OO#### ##OOO##### #OO####O## #O##OO##O# ####OO#### #O###O##O# ####O#####
+            *   #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O#
+            
+            </remarks>
+            <response code="200">Returns the lake surface area</response>
+            <response code="400">If the item is null</response>  
+        </member>
+        <member name="M:TestTask.Controllers.MapDataController.LoadWaterArea(System.String)">
+            <summary>
+            Takes the map data as input and returns the total water surface area.
+            </summary>
+            <param name="mapData">"#" as land square meter, "O" as water square meter, combining to make a square map</param>
+            <remarks>
+            Sample requests:
+            
+            *   ########## ##O##O#O#O ##OOOOOOOO ####O##### ##OOO##### #OO####O## #OOOO###O# ####OO#### #####O#### ##########
+            *   ###O##O##O ##O##O#O#O ##OOO##OOO O###OO#### ##OOO##### #OO####O## #O##OO##O# ####OO#### #O###O##O# ####O#####
+            *   #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O#
+            
+            </remarks>
+            <response code="200">Returns the water surface area</response>
+            <response code="400">If the item is null</response>  
+        </member>
+        <member name="M:TestTask.Controllers.MapDataController.LoadMap(System.String)">
             <summary>
             Takes the map data as input and returns the Map object JSON.
             </summary>
             <param name="mapData">Post method input</param>
             <remarks>
-            Sample request:
+            Sample requests:
             
-               ########## ##O##O#O#O ##OOOOOOOO ####O##### ##OOO##### #OO####O## #OOOO###O# ####OO#### #####O#### ##########
+            *   ########## ##O##O#O#O ##OOOOOOOO ####O##### ##OOO##### #OO####O## #OOOO###O# ####OO#### #####O#### ##########
+            *   ###O##O##O ##O##O#O#O ##OOO##OOO O###OO#### ##OOO##### #OO####O## #O##OO##O# ####OO#### #O###O##O# ####O#####
+            *   #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O# #O#O#O#O#O O#O#O#O#O#
             
             </remarks>
             <response code="200">Returns the Map object JSON</response>
             <response code="400">If the item is null</response>
-        </member>
-        <member name="M:TestTask.Controllers.MapDataController.LoadLakeData(System.String)">
-            <summary>
-            Takes the map data as input and returns the Lake(water squares that have an adjacent water square) area.
-            </summary>
-            <param name="mapData">Post method input</param>
-            <response code="200">Returns the lake surface area</response>
-            <response code="400">If the item is null</response>  
-        </member>
-        <member name="M:TestTask.Controllers.MapDataController.LoadWaterData(System.String)">
-            <summary>
-            Takes the map data as input and returns the Lake(water squares that have an adjacent water square) area.
-            </summary>
-            <param name="mapData">Post method input</param>
-            <response code="200">Returns the water surface area</response>
-            <response code="400">If the item is null</response>  
         </member>
     </members>
 </doc>

@@ -1,21 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using LakeAreaService.Landscapes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
 
 namespace TestTask
 {
@@ -39,8 +31,10 @@ namespace TestTask
                 {
                     Title = "Map Data Api",
                     Version = "v1",
-                    Description = "An API to return the map data json, water surface area or lake surface area from either" +
-                                  "The **Input.asc** file in **Resources** folder or, map data provided with **post method**.",
+                    Description = "An API to return the map object json, water surface area or lake surface area from either" +
+                                  "The `Input.asc` file in `Resources` folder or, map data provided with `post methods`.<br/><br/><br/>" +
+                                  "***Requirements:***<br/><br/>" +
+                                  "1. The input map needs to be rectangular, which means each **Row** has to have the same length.",
                     Contact = new OpenApiContact
                     {
                         Name = "Baris Can Soy",
@@ -80,9 +74,7 @@ namespace TestTask
                 c.RoutePrefix = string.Empty;
             });
 
-            //Use api/*controller name*/*action name*
             app.UseMvc();
         }
     }
 }
-//config => { config.MapRoute("defaultRoute", "api/{controller}/{action}"); }
