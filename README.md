@@ -71,3 +71,5 @@
 		<td>Not Found - Wrong Type Of Input (Post Methods)</td>
 	</tr>
 </table>
+
+PS. Swagger UI is at the index.
