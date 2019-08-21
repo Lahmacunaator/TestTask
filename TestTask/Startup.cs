@@ -34,7 +34,8 @@ namespace TestTask
                     Description = "An API to return the map object json, water surface area or lake surface area from either" +
                                   "The `Input.asc` file in `Resources` folder or, map data provided with `post methods`.<br/><br/><br/>" +
                                   "***Requirements:***<br/><br/>" +
-                                  "1. The input map needs to be rectangular, which means each **Row** has to have the same length.",
+                                  "1. The input map needs to be rectangular, which means each **Row** has to have the same length.</br>" +
+                                  "2. Rows can't contain whitespaces.",
                     Contact = new OpenApiContact
                     {
                         Name = "Baris Can Soy",
